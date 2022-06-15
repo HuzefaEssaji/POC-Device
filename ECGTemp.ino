@@ -1,5 +1,3 @@
-// this is version 6 base code
-
 #include <Arduino_JSON.h>
 #include <WiFi.h>
 #include <HTTPClient.h>
@@ -287,16 +285,25 @@ void getTemp()
     float temp = 0;
     float dataCounter = 0;
     tft.fillScreen(BLACK);
-
+    int timeremaning;
+    long starttime = millis();
     while ( dataCounter <= 1000)
     {
       dataCounter++;
       temp =  temp + mlx.readObjectTempF();
       //      Serial.println(mlx.readObjectTempF());
 
-      tft.drawString(" Please Wait Recording", 0, 50, 1);
+      //tft.drawString(" Please Wait Recording", 0, 50, 1);
+      timeremaning = (1000 - dataCounter) / 100;
+      
+      if ((int)dataCounter % 10 == 0)
+      {
+        tft.fillScreen(BLACK);
+        tft.drawString("Please wait for " + String(timeremaning) + " Seconds.", 0, 50, 1);
+      }
 
-      delay(10);
+      while (millis() - starttime <= 10);
+      starttime = millis();
     }
     temp = temp / dataCounter;
 
@@ -306,7 +313,7 @@ void getTemp()
 
     if (temp <= 94)
     {
-      tft.setTextColor(GREEN);
+      tft.setTextColor(BLUE);
       tft.setCursor(95, 140);
       tft.println("  " + String(temp) + " F");
       tft.setCursor(60, 160);
@@ -317,7 +324,7 @@ void getTemp()
 
     }
     else if (temp > 94 && temp <= 100) {
-      tft.setTextColor(YELLOW);
+      tft.setTextColor(GREEN);
       tft.setCursor(95, 140);
       tft.println("  " + String(temp) + " F");
       tft.setCursor(130, 160);
@@ -328,7 +335,7 @@ void getTemp()
 
     }
     else if (temp > 100) {
-      tft.setTextColor(BLUE);
+      tft.setTextColor(RED);
       tft.setCursor(95, 140);
       tft.println("  " + String(temp) + " F");
       tft.setCursor(130, 160);
@@ -411,7 +418,7 @@ void getECG()
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////ECG Reading
 
-    int dataCounts = 30000;
+    int dataCounts = ecgRes * ecgTim;
     long oldReadingTime = millis();
     while (dataCounter < dataCounts)
     {
@@ -571,7 +578,12 @@ void getECG()
       //////////////////////////////////////////////////////////////////////////////////////////Delay : streaches graph. inversely proportional
       //      delayMicroseconds(6000);  // 7  Add Slider here
       // Serial.println(millis() - toteltimeforfunction);
-
+      int timeremaning = (dataCounts - dataCounter)/100;
+      if ((int)dataCounter % 10 == 0)
+      {
+       tft.fillRect(0, 195, 250,20, BLACK);
+        tft.drawString("Please wait for " + String(timeremaning) + " Seconds.", 0, 200, 1);
+      }
       while (millis() - oldReadingTime < delayTime);
       //Serial.println("   "+String(millis() - oldReadingTime));
       oldReadingTime = millis();
