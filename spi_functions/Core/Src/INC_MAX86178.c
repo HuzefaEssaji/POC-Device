@@ -245,33 +245,32 @@ unsigned char * max_read_reg( unsigned char  reg_addr,uint8_t count)
 
 		unsigned char *temp;
 
+		int k = 0,count_sample = 0;
+
+		for(int j=0;j<30;++j)
+		{
 
 
-int k = 0,count_sample = 0;
+			while (*(max_read_reg(0x0b,1)+2)!=0x06)
+					{
 
-		for(int j=0;j<30;++j){
+					}
 
+					temp=max_read_reg(0x0c,18);
 
-	while (*(max_read_reg(0x0b,1)+2)!=0x06)
-			{
+					while(k<20){
 
-			}
+						sample[count_sample]=*(temp+k);
+						k++;
+						count_sample++;
+					}
 
-			temp=max_read_reg(0x0c,18);
-
-			while(k<20){
-
-				sample[count_sample]=*(temp+k);
-				k++;
-				count_sample++;
-			}
-
-			k=0;
+					k=0;
 
 
 
 
-			}
+					}
 
 
 
@@ -329,6 +328,37 @@ unsigned char cyprus_reg[14]=
 
 
 		  }*/
-
-
+//uint32_t shifter()
+//{
+//
+//		uint32_t temp2,temp3 = 0;
+//
+//		samples[l] =  0x0000000F & samples[l] ;
+//
+//		samples[l] = samples[l] << 16;
+//		temp3 = temp3 | samples[l];
+//
+//		samples[l+1] = samples[l+1] << 8;
+//		temp3 = temp3 | samples[l+1];
+//
+//		temp3 = temp3 | samples[l+2];
+//
+//		//samples_p1_m1[l] = temp3;
+//
+//
+//
+//		/*samples[l+3] =  0x0000000F & samples[l+3] ;
+//
+//		samples[l+3] = samples[l+3] << 16;
+//		temp3 = temp3 | samples[l+3];
+//
+//		samples[l+4] = samples[l+4] << 8;
+//		temp3 = temp3 | samples[l+4];
+//
+//		temp3 = temp3 | samples[l+5];
+//
+//		samples_p2_m1[l] =temp3;
+//
+//*/		return temp3;
+//}
 
