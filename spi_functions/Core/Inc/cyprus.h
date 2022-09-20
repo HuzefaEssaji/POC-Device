@@ -5,6 +5,9 @@
  *      Author: essaj
  */
 
+
+
+
 #ifndef INC_CYPRUS_H_
 #define INC_CYPRUS_H_
 
@@ -13,6 +16,11 @@
 #endif /* INC_CYPRUS_H_ */
 
 #define base						(uint8_t)0x00
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/////PPG macros//////////////////////////
 
 
 #define Set_Pin_Functional_Configuration (uint8_t)0x01
@@ -142,20 +150,60 @@
 
 
 
-/*
-//User Register Map
-#define Status1 					(uint8_t)0x00
-#define Status2 					(uint8_t)0x01
-#define Status3 					(uint8_t)0x02
-#define Status4 					(uint8_t)0x03
-#define Status5 					(uint8_t)0x04
-*/
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/////////////////////ECG with 3 dry electrodes  Macros////////////////////////
+
+///PLL CONFIGURATION
+
+#define Set_REF_CLK_SEL
+#define Set_CLK_FRE_SEL      0X01
+#define Set_MDIV				0X7F
+#define Set_ECG_NVID         0X10
+#define Set_ECG_FDIV			0X01
+#define Set_PLL_EN				0X01
+
+///ECG CONFIGURATION
+
+#define Set_ECG_DEC_RATE        0X05
+#define Set_ECG_PGA_GAIN		0X0
+#define Set_ECG_INA_RGE			0X0
+#define Set_ECG_INA_GAIN		0X0
+#define Set_ECG_AUTO_REC		0X01
+#define Set_EN_ECG_FAST_REC		0X01
+#define Set_ECG_FAST_REC_THRESHOLD   0X3D
+#define Set_EN_ECG__RBIASP			0X0
+#define Set_EN_ECG__RBIASN			0X0
+#define Set_ECG__MUX_SEL
+#define Set_ECG_OPEN_P			0X0
+#define Set_ECG_OPEN_N			0X0
+
+
+#define Set_ECG_EN				0X1
+
+/////////////AC LEAD-OFF DETECTION CONFIGURATION
+
+#define Set_ECG_LOFF_FRE			0X07
+#define Set_ECG_LOFF_IMAG			0X06
+#define Set_ECG_LOFF_THRESH			0X02
+#define Set_ECG_LOFF_MODE			0X01
+
+#define Set_EN_ECG_LOFF				0X01
+
+/////////////RLD CONFIGURATION
+
+#define Set_RLD_OOR					0X01
+#define Set_ACTV_CM_P				0X01
+#define Set_ACTV_CM_N				0X01
+#define Set_RLD_GAIN				0X03
+#define Set_RLD_EXT_RES				0X0
+#define Set_RLD_SEL_ECG				0X01
+#define Set_RLD_BW					0X0
+#define Set_RLD_BIAS_DAC			0X0
+
+#define Set_RLD__EN					0X01
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
 
-
-
-//
-//char* read_reg(char reg_addr);
-//
-//void write_reg(char reg_addr,char write_val);

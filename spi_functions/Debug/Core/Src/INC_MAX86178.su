@@ -1,3 +1,4 @@
-../Core/Src/INC_MAX86178.c:28:17:max_read_reg	88	dynamic
-../Core/Src/INC_MAX86178.c:65:8:max_write_reg	56	dynamic
-../Core/Src/INC_MAX86178.c:121:18:ppg_init	152	static
+../Core/Src/INC_MAX86178.c:29:17:max_read_reg	88	dynamic
+../Core/Src/INC_MAX86178.c:60:7:max_write_reg	56	dynamic
+../Core/Src/INC_MAX86178.c:92:10:shifter	32	static
+../Core/Src/INC_MAX86178.c:110:17:ppg_init	152	static
