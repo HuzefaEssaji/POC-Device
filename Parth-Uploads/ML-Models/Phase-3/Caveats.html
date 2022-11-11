@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Risk Calculator – Important Caveats to Consider</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=0.5, maximum-scale=1.5" />
+	<link rel="stylesheet" href="static/style.css" />
+</head>
+<body>
+	<div id="container" class="pad">
+		<div id="localization">
+			<span data-lang-id="languages">Languages</span>:
+			<select id="selectLocalization" onChange="language = $(this).val(); LoadLocalizationSubpage($(this).val())">
+				<option value="en" data-page-title="Risk Calculator – Important Caveats to Consider" selected="selected" >English (EN)</option>
+				<option value="fr"  data-page-title="Risk Calculator – Mise en garde importante à considérer">Français (FR)</option>
+				<!--<option value="ru" data-page-title="Risk Calculator – Важные моменты, на которые нужно обратить внимание">Pусский (RU)</option>-->
+			</select>
+		</div>
+	
+		<div class="localizeSubpage" data-lang="en">
+			<h1>Important Caveats To Consider</h1>
+			<h2>DO NOT USE THE RISK CALCULATOR AS A TOOL TO RECOMMEND SPECIFIC RISK FACTOR THRESHOLDS OR TARGETS</h2>
+			<p>As per the FAQs, this calculator should not be used to categorize patients into specific risk categories nor to identify specfic risk factor targets as these are arbitrary, do not use evidence from RCTs, and do not incorporate patient values or preferences.</p>
+			<h2>Do not use the calculator sliders to make an estimate of the benefit of treatment</h2>
+			<p>Changing the calculator sliders and/or buttons could, in theory, be used to show an estimate of benefit by just sliding them back to numbers or categories of lower risk. Unfortunately, this doesn't appear to be an accurate way to calculate estimates of benefits. The exception may be smoking, where likely the best way (as there are no RCTs of stopping smoking) to demonstrate the benefit of quitting smoking is to unclick smoking and use this to show the potential CVD benefit of stopping smoking. Most studies suggest the cardiovascular risks associated with smoking are reversed after 5-10 years of not smoking. To get an estimate of the potential cardiovascular benefit of other interventions, click on the specific intervention (BP, activity, statins, etc) below the risk sliders.</p>
+			<h2>Do not use the calculator to make estimates for patients above age 80 as the relation between increases in the risk factors used in most calculators and increased risk of CVD do not seem to hold</h2>
+			<p>Evidence suggests for younger people, there does appear to be an association between changes in risk factors and the risk of cardiovascular events and thus is the rationale for the use of risk calculators. However, this does not appear to be the case in patients over the age of 80 so refrain from using this calculator to estimate risk in this patient population. BMJ 2009;338:a3083 doi:10.1136/bmj.a3083</p>
+			<h2>Do not use the calculator to make estimates for patients already receiving treatment except when using ASCVD</h2>
+			<p>The Framingham database is not designed to calculate risk if patients are already being treated with a drug that lowers blood pressure or some other surrogate marker. Previous untreated numbers should be used. For the ASCVD calculations one can add in if the person is on treatment for blood pressure.</p>
+		</div>
+		
+		<div class="localizeSubpage" data-lang="ru" style="display: none;">
+			<h1>Важные моменты, на которые нужно обратить внимание</h1>
+			<h2>НЕ ИСПОЛЬЗУЙТЕ КАЛЬУЛЯТОР, КАК ИНСТРУМЕНТ ДЛЯ ОПРЕДЕЛЕНИЯ ПОРОГОВЫХ ВЕЛИЧИН И ЦЕЛЕВЫХ ЗНАЧЕНИЙ ОТДЕЛЬНЫХ ФАКТОРОВ РИСКА</h2>
+			<p>Раздел FAQ указывает на то, что, калькулятор не предназначен ни для определения пациента в одну из групп риска ни для того, чтобы установить отдельные целевые значения, поскольку они выбраны произвольно, без учёта доказательных данных РКИ, оценок и предпочтений пациентов.</p>
+			<h2>Не используйте динамические шкалы калькулятора для оценки пользы от лечения</h2>
+			<p>Теоретически, вы можете переместить указатель динамической шкалы и нажать кнопки, чтобы показать возможную пользу, когда указатель движется в сторону групп или категорий пациентов с меньшим риском. К сожалению, инструмент не достаточно точен для количественной оценки пользы вмешательств. Исключением может быть курение. Поскольку РКИ прекращения курения не проводилось, вероятно, лучший способ показать пользу отказа от курения - выбрать в выпадающем списке "Не курит", и продемострировать уменьшение сердечно-сосудистого риска. В большинстве исследований показано, что повышение сердечно-сосудистого риска, связанное с куреннием, прекращается через 5-10 лет после того, как пациент бросил курить. Для оценки возможного положительного влияния других вмешательств, укажите отдельные из них (артериальное давление, физическая активность, приём статинов и т.д.) ниже динамических шкал риска.</p>
+			<h2>Не используйте калькулятор для оценок пациентов в возрасте старше 80 лет, поскольку, связь между увеличением факторов риска, которое использована в большинстве калькуляторов и повышением риска ССЗ не сохраняется.</h2>
+			<p>В отношении молодых более молодых людей были получены доказательства связи изменения факторов риска и вероятности сердечно-сосудистых осложнений, что позволяет использовать калькуляторы риска. Однако, такие данные о пациентах в возрасте старше 80 лет отсутствуют, поэтому, недопустимо использовать калькулятор для оценки риска в этой группе пациентов. BMJ 2009;338:a3083 doi:10.1136/bmj.a3083</p>
+			<h2>Не используйте калькуляторы, за исключением ASCVD, для оценки пациентов, которые уже получают лечение.</h2>
+			<p>База данных Фрамингемского исследования не преднозначена для оценки риска у пациентов, которые уже получают лечение препаратами, снижающими артериальное давление или величину какого-либо другого сурогатного маркера. Необходимо использовать показатели, которые были получены до начала лечения. Расчёты с использованием калькулятора ASCVD возможны и в отношении лиц, получающих антигипертензивную терапию.</p>
+		</div>
+		
+		<div class="localizeSubpage" data-lang="fr" style="display: none;">
+		
+		</div>
+	</div>
+	
+	<div id="footer">
+		James McCormack/Pascal Pfiffner, 2017
+	</div>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="static/URI.min.js"></script>
+	<script src="static/localization.subpages.min.js"></script>
+	
+</body>
+</html>
