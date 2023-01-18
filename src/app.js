@@ -5,7 +5,6 @@ const api = require("./routes/api");
 const app = express();
 const { graphqlHTTP } = require("express-graphql");
 const schema = require("./models/graphql");
-require("dotenv").config();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

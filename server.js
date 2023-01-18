@@ -1,4 +1,6 @@
 const http = require("http");
+const db = require("./src/models/sequelize");
+require("dotenv").config();
 
 const app = require("./src/app");
 
@@ -12,4 +14,6 @@ async function startServer() {
   });
 }
 
-startServer();
+db.sync().then(() => {
+  startServer();
+});
