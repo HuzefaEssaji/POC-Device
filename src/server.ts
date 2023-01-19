@@ -1,11 +1,10 @@
-const http = require("http");
-const db = require("./src/models/sequelize");
 require("dotenv").config();
+import http from "http"
+import db from "./models/sequelize"
+import app from "./app"
 
-const app = require("./src/app");
 
-const PORT = process.env.PORT || 8000;
-
+const PORT = process.env.PORT || 3000;
 const server = http.createServer(app);
 
 async function startServer() {

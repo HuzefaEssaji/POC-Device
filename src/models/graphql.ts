@@ -24,6 +24,17 @@ const books = [
   { id: 8, name: "Beyond the Shadows", authorId: 3 },
 ];
 
+interface bookType {
+  readonly id: number,
+  name: string,
+  authorId: number,
+}
+
+interface authorType {
+  readonly id: number,
+  name: string,
+}
+
 const BookType = new GraphQLObjectType({
   name: "Book",
   description: "This represents a book written by an author",
@@ -33,7 +44,7 @@ const BookType = new GraphQLObjectType({
     authorId: { type: GraphQLNonNull(GraphQLInt) },
     author: {
       type: AuthorType,
-      resolve: (book) => {
+      resolve: (book: bookType) => {
         return authors.find((author) => author.id === book.authorId);
       },
     },
@@ -48,7 +59,7 @@ const AuthorType = new GraphQLObjectType({
     name: { type: GraphQLNonNull(GraphQLString) },
     books: {
       type: new GraphQLList(BookType),
-      resolve: (author) => {
+      resolve: (author: authorType) => {
         return books.filter((book) => book.authorId === author.id);
       },
     },
@@ -65,7 +76,7 @@ const RootQueryType = new GraphQLObjectType({
       args: {
         id: { type: GraphQLInt },
       },
-      resolve: (parent, args) => books.find((book) => book.id === args.id),
+      resolve: (parent: bookType, args: {id: number}) => books.find((book) => book.id === args.id),
     },
     books: {
       type: new GraphQLList(BookType),
@@ -83,7 +94,7 @@ const RootQueryType = new GraphQLObjectType({
       args: {
         id: { type: GraphQLInt },
       },
-      resolve: (parent, args) => authors.find((author) => author.id === args.id),
+      resolve: (parent: authorType, args: {id : number}) => authors.find((author) => author.id === args.id),
     },
   }),
 });
@@ -99,7 +110,10 @@ const RootMutationType = new GraphQLObjectType({
         name: { type: GraphQLNonNull(GraphQLString) },
         authorId: { type: GraphQLNonNull(GraphQLInt) },
       },
-      resolve: (parent, args) => {
+      resolve: (parent: bookType, args: {
+        name: string,
+        authorId: number
+      }) => {
         const book = { id: books.length + 1, name: args.name, authorId: args.authorId };
         books.push(book);
         return book;
@@ -111,7 +125,7 @@ const RootMutationType = new GraphQLObjectType({
       args: {
         name: { type: GraphQLNonNull(GraphQLString) },
       },
-      resolve: (parent, args) => {
+      resolve: (parent: authorType, args: {name: string}) => {
         const author = { id: authors.length + 1, name: args.name };
         authors.push(author);
         return author;
@@ -125,4 +139,4 @@ const schema = new GraphQLSchema({
   mutation: RootMutationType,
 });
 
-module.exports = schema;
+export default schema;
