@@ -1,8 +1,7 @@
-require("dotenv").config();
 import http from "http"
-import db from "./models/sequelize"
-import app from "./app"
-
+import app from "./src/app"
+import db from "./src/sequelize";
+// import TestingData from "./src/testing";
 
 const PORT = process.env.PORT || 3000;
 const server = http.createServer(app);
@@ -14,5 +13,6 @@ async function startServer() {
 }
 
 db.sync().then(() => {
+  // TestingData()
   startServer();
-});
+})

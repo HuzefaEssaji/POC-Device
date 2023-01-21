@@ -1,0 +1,57 @@
+[
+  {
+    "uid": "1",
+    "name": "John Smith",
+    "aadhar": "1234567890",
+    "email": "johnsmith@example.com",
+    "father_name": "James Smith",
+    "mother_name": "Jane Smith",
+    "address": "123 Main St, Anytown USA",
+    "date_of_birth": "1998-01-01",
+    "blood_group": "7"
+  },
+  {
+    "uid": "2",
+    "name": "Emily Johnson",
+    "aadhar": "2345678901",
+    "email": "emilyjohnson@example.com",
+    "father_name": "Edward Johnson",
+    "mother_name": "Emily Johnson",
+    "address": "456 Park Ave, Anytown USA",
+    "date_of_birth": "1999-02-02",
+    "blood_group": "2"
+  },
+  {
+    "uid": "3",
+    "name": "Michael Williams",
+    "aadhar": "3456789022",
+    "email": "michaelwilliams@example.com",
+    "father_name": "Mark Williams",
+    "mother_name": "Michele Williams",
+    "address": "789 Elm St, Anytown USA",
+    "date_of_birth": "2000-03-03",
+    "blood_group": "3"
+  },
+  {
+    "uid": "4",
+    "name": "Jessica Brown",
+    "aadhar": "4567890234",
+    "email": "jessicabrown@example.com",
+    "father_name": "James Brown",
+    "mother_name": "Julie Brown",
+    "address": "321 Oak St, Anytown USA",
+    "date_of_birth": "2001-04-04",
+    "blood_group": "6"
+  },
+  {
+    "uid": "5",
+    "name": "Matthew Martinez",
+    "aadhar": "5678902345",
+    "email": "matthewmartinez@example.com",
+    "father_name": "Mark Martinez",
+    "mother_name": "Melanie Martinez",
+    "address": "654 Pine St, Anytown USA",
+    "date_of_birth": "2002-05-05",
+    "blood_group": "8"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Blood test",
+    "comments": "Checking for anemia and other blood disorders",
+    "date": "2022-11-01"
+  },
+  {
+    "name": "X-ray",
+    "comments": "Checking for broken bones and lung abnormalities",
+    "date": "2022-10-15"
+  },
+  {
+    "name": "CT scan",
+    "comments": "Checking for internal injuries and tumors",
+    "date": "2022-09-20"
+  },
+  {
+    "name": "MRI",
+    "comments": "Checking for brain and spinal cord injuries",
+    "date": "2022-08-10"
+  },
+  {
+    "name": "Ultrasound",
+    "comments": "Checking for pregnancy and abdominal abnormalities",
+    "date": "2022-07-01"
+  },
+  {
+    "name": "EKG",
+    "comments": "Checking for heart disorders",
+    "date": "2022-06-15"
+  }
+]

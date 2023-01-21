@@ -1,0 +1,32 @@
+[
+  {
+    "drug": "Ibuprofen",
+    "dosage": "200mg",
+    "interval": "Every 6 hours as needed"
+  },
+  {
+    "drug": "Acetaminophen",
+    "dosage": "500mg",
+    "interval": "Every 4 hours as needed"
+  },
+  {
+    "drug": "Amoxicillin",
+    "dosage": "500mg",
+    "interval": "Every 12 hours for 7 days"
+  },
+  {
+    "drug": "Metformin",
+    "dosage": "1000mg",
+    "interval": "Twice a day with meals"
+  },
+  {
+    "drug": "Lisinopril",
+    "dosage": "20mg",
+    "interval": "Once a day with breakfast"
+  },
+  {
+    "drug": "Aspirin",
+    "dosage": "81mg",
+    "interval": "Once a day before bed"
+  }
+]

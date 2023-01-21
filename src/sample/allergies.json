@@ -1,0 +1,10 @@
+[
+  { "name": "Peanut allergy" },
+  { "name": "Lactose intolerance" },
+  { "name": "Hay fever" },
+  { "name": "Gluten intolerance" },
+  { "name": "Fish allergy" },
+  { "name": "Egg allergy" },
+  { "name": "Dog allergy" },
+  { "name": "Cat allergy" }
+]

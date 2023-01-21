@@ -25,8 +25,6 @@ export const UserType = new GraphQLObjectType({
   }),
 });
 
-
-
 // Mutation
 
 // import { GraphQLID, GraphQLString } from "graphql";

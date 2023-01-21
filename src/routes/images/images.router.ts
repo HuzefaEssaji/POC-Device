@@ -2,7 +2,7 @@ import express from "express"
 import cors from 'cors'
 import { httpPostImage, upload } from "./images.controller"
 import log4js from "log4js";
-import whitelist from "./../../cors-aloud.json"
+import whitelist from "./../../../cors-aloud.json"
 
 const imagesRouter = express.Router();
 const corsOptions = {

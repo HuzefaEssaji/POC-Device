@@ -5,7 +5,7 @@
   "scripts": {
     "start": "pm2 start ./dist/server.ts",
     "stop": "pm2 stop all",
-    "dev": "nodemon ./src/server.ts",
+    "dev": "nodemon ./server.ts",
     "build": "tsc -p ."
   },
   "license": "MIT",
@@ -15,6 +15,7 @@
     "@types/morgan": "^1.9.4",
     "@types/multer": "^1.4.7",
     "@types/node": "^18.11.18",
+    "@types/sequelize": "^4.28.14",
     "adm-zip": "^0.5.10",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
