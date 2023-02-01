@@ -1,0 +1,14 @@
+[
+  { "allergy": 7, "patient_id": 4 },
+  { "allergy": 3, "patient_id": 5 },
+  { "allergy": 1, "patient_id": 1 },
+  { "allergy": 8, "patient_id": 3 },
+  { "allergy": 2, "patient_id": 2 },
+  { "allergy": 5, "patient_id": 5 },
+  { "allergy": 4, "patient_id": 4 },
+  { "allergy": 6, "patient_id": 1 },
+  { "allergy": 7, "patient_id": 2 },
+  { "allergy": 8, "patient_id": 5 },
+  { "allergy": 3, "patient_id": 3 },
+  { "allergy": 1, "patient_id": 4 }
+]

@@ -1,6 +1,8 @@
 import { GraphQLObjectType, GraphQLID, GraphQLString, GraphQLInt, GraphQLList } from "graphql";
+import { Doctors } from "../../models/doctor";
 import { PrescriptionList } from "../../models/prescriptions";
 import { TestsList } from "../../models/tests";
+import { DoctorsType } from "./doctor";
 import { PrescriptionListType } from "./prescriptions";
 import { TestListType } from "./tests";
 
@@ -35,6 +37,15 @@ export const VisitsType = new GraphQLObjectType({
         })
       }
     },
-    doctor_visited: { type: GraphQLInt }
+    doctor_visited: {
+      type: DoctorsType,
+      resolve: (parent) => {
+        return Doctors.findOne({
+          where: {
+            id: parent.doctor_visited
+          }
+        })
+      }
+    }
   }),
 });

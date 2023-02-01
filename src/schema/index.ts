@@ -1,5 +1,5 @@
 import { GraphQLObjectType, GraphQLSchema } from "graphql";
-import { AllergiesQuery, BloodGroupsQuery, DoctorsQuery, PatientsQuery, PrescriptionsQuery, TestsQuery, VisitsQuery } from "./queries/queries";
+import { AllergiesQuery, AllVisitsByDoctor, BloodGroupsQuery, DoctorsQuery, PatientsQuery, PrescriptionsQuery, TestsQuery, VisitsQuery } from "./queries/queries";
 // import { CREATE_USER, DELETE_USER, UPDATE_PASSWORD } from "./mutations/user";
 
 const RootQuery = new GraphQLObjectType({
@@ -7,12 +7,12 @@ const RootQuery = new GraphQLObjectType({
   fields: {
     "bloodgroups": BloodGroupsQuery,
     "allergies": AllergiesQuery,
-    // "patient_allergies": AllergiesListQuery,
     "tests": TestsQuery,
     "prescriptions": PrescriptionsQuery,
     "visits": VisitsQuery,
     "patients": PatientsQuery,
     "doctors": DoctorsQuery,
+    "getDoctorVisits": AllVisitsByDoctor,
   },
 });
 

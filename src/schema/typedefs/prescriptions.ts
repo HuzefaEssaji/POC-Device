@@ -1,4 +1,5 @@
 import { GraphQLObjectType, GraphQLID, GraphQLString, GraphQLInt } from "graphql";
+import { Prescription } from "../../models/prescriptions";
 
 export const PrescriptionType = new GraphQLObjectType({
   name: "All_Prescriptions_Available",
@@ -15,6 +16,15 @@ export const PrescriptionListType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLID },
     visit_id: { type: GraphQLInt },
-    prescription: { type: PrescriptionType },
+    prescription: {
+      type: PrescriptionType,
+      resolve: (parent) => {
+        return Prescription.findOne({
+          where: {
+            id: parent.prescription
+          }
+        })
+      }
+    },
   }),
 });

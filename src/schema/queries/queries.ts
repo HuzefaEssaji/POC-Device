@@ -1,4 +1,4 @@
-import { GraphQLList } from "graphql";
+import { GraphQLID, GraphQLList, TypedQueryDocumentNode } from "graphql";
 import { Allergies } from "../../models/allergies";
 import { BloodGroup } from "../../models/blood_group";
 import { Doctors } from "../../models/doctor";
@@ -60,5 +60,19 @@ export const DoctorsQuery = {
   type: new GraphQLList(DoctorsType),
   resolve() {
     return Doctors.findAll();
+  }
+}
+
+export const AllVisitsByDoctor = {
+  type: new GraphQLList(VisitsType),
+  args: {
+    id: { type: GraphQLID }
+  },
+  resolve: (parent: any, args: any) => {
+    return Visits.findAll({
+      where: {
+        doctor_visited: args.id
+      }
+    });
   }
 }

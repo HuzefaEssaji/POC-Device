@@ -1,0 +1,47 @@
+[
+  {
+    "patient": 1,
+    "date": "2023-02-01",
+    "weight": 70,
+    "height": 170,
+    "temperature": 36.5,
+    "bp": "120/80",
+    "doctor_visited": 1
+  },
+  {
+    "patient": 2,
+    "date": "2023-02-01",
+    "weight": 65,
+    "height": 165,
+    "temperature": 37.2,
+    "bp": "115/75",
+    "doctor_visited": 2
+  },
+  {
+    "patient": 3,
+    "date": "2023-02-01",
+    "weight": 68,
+    "height": 168,
+    "temperature": 36.7,
+    "bp": "118/79",
+    "doctor_visited": 3
+  },
+  {
+    "patient": 4,
+    "date": "2023-02-01",
+    "weight": 72,
+    "height": 172,
+    "temperature": 36.9,
+    "bp": "121/81",
+    "doctor_visited": 2
+  },
+  {
+    "patient": 5,
+    "date": "2023-02-01",
+    "weight": 75,
+    "height": 175,
+    "temperature": 36.8,
+    "bp": "119/80",
+    "doctor_visited": 5
+  }
+]

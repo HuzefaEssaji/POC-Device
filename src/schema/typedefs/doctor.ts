@@ -9,15 +9,15 @@ export const DoctorsType = new GraphQLObjectType({
     name: { type: GraphQLString },
     email: { type: GraphQLString },
     branch: { type: GraphQLString },
-    visits: {
-      type: new GraphQLList(VisitsType),
-      resolve: (doctor) => {
-        return Visits.findAll({
-          where: {
-            doctor_visited: doctor.id
-          }
-        })
-      }
-    },
+    // visits: {
+    //   type: new GraphQLList(VisitsType),
+    //   resolve: (doctor) => {
+    //     return Visits.findAll({
+    //       where: {
+    //         doctor_visited: doctor.id
+    //       }
+    //     })
+    //   }
+    // },
   }),
 });

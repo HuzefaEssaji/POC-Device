@@ -12,7 +12,16 @@ async function startServer() {
   });
 }
 
-db.sync().then(() => {
-  // TestingData()
-  startServer();
-})
+// db.sync({
+//   force: true,
+// }).then(() => {
+//   TestingData()
+//   startServer();
+// })
+
+db.query('SET FOREIGN_KEY_CHECKS = 0', { raw: true }).then(function () {
+  db.sync().then(function () {
+    // TestingData()
+    startServer();
+  });
+});

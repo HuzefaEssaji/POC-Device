@@ -1,4 +1,5 @@
 import { GraphQLObjectType, GraphQLID, GraphQLString, GraphQLInt } from "graphql";
+import { Allergies } from "../../models/allergies";
 
 export const AllergyType = new GraphQLObjectType({
   name: "Allergies",
@@ -13,7 +14,16 @@ export const AllergyListType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLID },
     patient_id: { type: GraphQLInt },
-    allergy: { type: AllergyType }
+    allergy: {
+      type: AllergyType,
+      resolve: (parent) => {
+        return Allergies.findOne({
+          where: {
+            id: parent.allergy
+          }
+        })
+      }
+    }
   }),
 });
 
