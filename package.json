@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "pm2 start ./dist/server.ts",
+    "start": "pm2 start ./dist/server.js",
     "stop": "pm2 stop all",
     "dev": "nodemon ./server.ts",
     "build": "tsc -p ."

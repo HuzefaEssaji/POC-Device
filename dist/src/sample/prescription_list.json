@@ -1,0 +1,14 @@
+[
+    { "prescription": 3, "visit_id": 4 },
+    { "prescription": 1, "visit_id": 2 },
+    { "prescription": 5, "visit_id": 3 },
+    { "prescription": 2, "visit_id": 5 },
+    { "prescription": 6, "visit_id": 1 },
+    { "prescription": 1, "visit_id": 5 },
+    { "prescription": 4, "visit_id": 2 },
+    { "prescription": 3, "visit_id": 1 },
+    { "prescription": 2, "visit_id": 4 },
+    { "prescription": 5, "visit_id": 3 },
+    { "prescription": 6, "visit_id": 2 },
+    { "prescription": 4, "visit_id": 5 }
+]

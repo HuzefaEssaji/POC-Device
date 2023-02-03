@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Dr. John Doe",
+        "email": "johndoe@example.com",
+        "branch": "Cardiology"
+    },
+    {
+        "name": "Dr. Jane Smith",
+        "email": "janesmith@example.com",
+        "branch": "Pediatrics"
+    },
+    {
+        "name": "Dr. Bob Brown",
+        "email": "bobbrown@example.com",
+        "branch": "Orthopedics"
+    },
+    {
+        "name": "Dr. Sarah Johnson",
+        "email": "sarahjohnson@example.com",
+        "branch": "Dermatology"
+    },
+    {
+        "name": "Dr. David Wilson",
+        "email": "davidwilson@example.com",
+        "branch": "Neurology"
+    }
+]
